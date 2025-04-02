@@ -1,0 +1,58 @@
+---
+layout: default
+title: Publications
+is_index: true
+---
+<main class="max-w-prose mx-auto">
+<h1 class="text-4xl text-navy-blue font-black mb-8">
+  Publications
+</h1>
+
+{% assign by_year = site.publications
+  | where_exp: "x", "x.is_index == nil"
+  | reverse
+  | group_by_exp: "x", "x.date | date: '%Y'" %}
+{% for publications in by_year %}
+  <h2 class="text-3xl text-navy-blue font-black">
+    {{ publications.name }}
+  </h2>
+  <ul>
+    {% for publication in publications.items %}
+      <li class="mb-4">
+        <div class="flex">
+          <div class="grow">
+            <a
+              class="base-link text-xl"
+              href="{{ publication.url | relative_url }}"
+            >
+              {{ publication.title }}
+            </a>
+            <ul>
+              {% for author in publication.authors %}
+                <li class="inline-block">
+                  {% if author.author %}
+                    {% assign author_page = site.people | where: "author_id", author.author | first %}
+                  {% else %}
+                    {% assign author_page = nil %}
+                  {% endif %}
+
+                  {% if author_page %}
+                    <a href="{{ author_page.url | relative_url }}" class="base-link">{{ author.name }}</a>{% unless forloop.last %},{% endunless %}
+                  {% else %}
+                    {{ author.name }}{% unless forloop.last %},{% endunless %}
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <ul class="text-right">
+            {% for link in publication.links %}
+              <li><a class="base-link" href="{{ link.last }}">[{{ link.first }}]</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+</main>

@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<main class="max-w-prose mx-auto">
+  <div class="text-2xl text-graphene-black mt-6">
+    {{ content }}
+  </div>
+
+  <h2 class="text-navy-blue text-3xl mt-8 font-extrabold mb-2">
+    News
+  </h2>
+
+  <ul>
+    {% for p in site.posts %}
+      <li class="pb-6 block">
+        <a
+          href="{{ p.url | relative_url }}"
+          class="visited-revert block font-bold base-link"
+        >
+          <h3 class="text-2xl">{{ p.title }}</h3>
+        </a>
+        <div class="mb-2">
+          <span>
+            {{ p.date | date_to_long_string }}
+          </span>
+          {% if p.author %}
+            {% assign author = site.people | where: "author_id", p.author | first %}
+            <span>
+              {% if author %}
+                by <a href="{{ author.url | relative_url }}" class="base-link">{{ author.title }}</a>
+              {% else %}
+                by {{ p.author }}
+              {% endif %}
+            </span>
+          {% endif %}
+        </div>
+
+        <div class="prose">
+          {{ p.excerpt | markdownify }}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</main>

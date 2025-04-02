@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/CI-CSE/ci-cse.github.io
+  revision: bf27fc5629d03280e0addac9b17eeed1bed1e004
+  glob: jekyll-theme-cicse/*.gemspec
+  specs:
+    jekyll-theme-cicse (0.1.0)
+      bigdecimal (>= 3.1.9)
+      jekyll (~> 4.4)
+      jekyll-seo-tag (~> 2.8)
+      jekyll-tailwindcss (>= 0.6.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,6 +81,8 @@ GEM
       sass-embedded (~> 1.75)
     jekyll-seo-tag (2.8.0)
       jekyll (>= 3.8, < 5.0)
+    jekyll-tailwindcss (0.6.2)
+      tailwindcss-ruby
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.10.2)
@@ -127,6 +140,13 @@ GEM
       google-protobuf (~> 4.30)
     sass-embedded (1.86.1-x86_64-linux-musl)
       google-protobuf (~> 4.30)
+    tailwindcss-ruby (4.0.17)
+    tailwindcss-ruby (4.0.17-aarch64-linux-gnu)
+    tailwindcss-ruby (4.0.17-aarch64-linux-musl)
+    tailwindcss-ruby (4.0.17-arm64-darwin)
+    tailwindcss-ruby (4.0.17-x86_64-darwin)
+    tailwindcss-ruby (4.0.17-x86_64-linux-gnu)
+    tailwindcss-ruby (4.0.17-x86_64-linux-musl)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.6.0)
@@ -160,6 +180,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.4.1)
   jekyll-feed (~> 0.12)
+  jekyll-theme-cicse!
   minima (~> 2.5)
   tzinfo (>= 1, < 3)
   tzinfo-data
