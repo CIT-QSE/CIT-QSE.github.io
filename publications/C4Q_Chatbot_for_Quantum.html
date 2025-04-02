@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <title>C4Q: A Chatbot for Quantum | Quantum Software Engineering</title>
+    <meta name="generator" content="Jekyll v4.4.1" />
+    <meta property="og:title" content="C4Q: A Chatbot for Quantum" />
+    <meta name="author" content="Yaiza Aragonés-Soria" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      name="description"
+      content="The chair of Quantum Software Engineering research agenda focuses on three areas: software engineering for embedded systems, software engineering for and with artificial intelligence and analytics, and software engineering for and with quantum computing.."
+    />
+    <meta
+      property="og:description"
+      content="The chair of Quantum Software Engineering research agenda focuses on three areas: software engineering for embedded systems, software engineering for and with artificial intelligence and analytics, and software engineering for and with quantum computing.."
+    />
+    <link rel="canonical" href="/publications/C4Q_Chatbot_for_Quantum.html" />
+    <meta
+      property="og:url"
+      content="/publications/C4Q_Chatbot_for_Quantum.html"
+    />
+    <meta property="og:site_name" content="Quantum Software Engineering" />
+    <meta property="og:type" content="article" />
+    <meta
+      property="article:published_time"
+      content="2024-08-06T00:00:00+00:00"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="C4Q: A Chatbot for Quantum" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": { "@type": "Person", "name": "Yaiza Aragonés-Soria" },
+        "dateModified": "2024-08-06T00:00:00+00:00",
+        "datePublished": "2024-08-06T00:00:00+00:00",
+        "description": "The chair of Quantum Software Engineering research agenda focuses on three areas: software engineering for embedded systems, software engineering for and with artificial intelligence and analytics, and software engineering for and with quantum computing..",
+        "headline": "C4Q: A Chatbot for Quantum",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "/publications/C4Q_Chatbot_for_Quantum.html"
+        },
+        "url": "/publications/C4Q_Chatbot_for_Quantum.html"
+      }
+    </script>
+    <!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body class="flex">
+    <div class="flex-1 flex flex-row-reverse">
+      <nav class="hidden xl:block w-[16rem]">
+        <div class="h-20 bg-gradient-to-tl from-blue-50"></div>
+        <ul class="bg-gradient-to-bl from-blue-50 pb-6">
+          <li>
+            <a
+              href="/publications/index.html"
+              class="min-h-8 block flex items-center hover:bg-blue-100 visited-revert pl-2 font-bold"
+            >
+              Publications
+            </a>
+          </li>
+
+          <li>
+            <span
+              class="min-h-8 flex items-center bg-blue-100 align-middle pl-4"
+            >
+              C4Q: A Chatbot for Quantum
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="w-full md:w-[50rem]">
+      <header class="mx-auto w-full text-white bg-navy-blue p-2">
+        <a href="https://institute.constructor.org/">
+          <img
+            src="/assets/images/C_IT_Logo_White_On_Transparent-cropped-min.svg"
+            alt="Constructor Institute of Technology"
+            class="h-3.5 block"
+          />
+        </a>
+
+        <a href="/" class="text-2xl my-2 inline-block">
+          Quantum Software Engineering
+        </a>
+        <ul class="flex items-center gap-6">
+          <li>
+            <a href="/">Home</a>
+          </li>
+
+          <li>
+            <a href="/people">People</a>
+          </li>
+
+          <li>
+            <a href="/publications">Publications</a>
+          </li>
+
+          <li>
+            <a href="/projects">Projects</a>
+          </li>
+        </ul>
+      </header>
+
+      <div class="p-2">
+        <main class="max-w-prose mx-auto">
+          <div class="flex mb-2">
+            <div class="grow">
+              <h1 class="text-2xl text-navy-blue font-black">
+                C4Q: A Chatbot for Quantum
+              </h1>
+
+              <ul class="inline-block">
+                <li class="inline-block">
+                  <a href="/people/yaiza-aragones.html" class="base-link"
+                    >Yaiza Aragonés-Soria</a
+                  >,
+                </li>
+
+                <li class="inline-block">
+                  <a href="/people/manuel-oriol.html" class="base-link"
+                    >Manuel Oriol</a
+                  >
+                </li>
+              </ul>
+
+              <p>06 August 2024</p>
+            </div>
+            <ul class="text-right">
+              <li class="ml-auto">
+                <a class="base-link" href="https://arxiv.org/abs/2402.01738"
+                  >[arxiv]</a
+                >
+              </li>
+
+              <li class="ml-auto">
+                <a
+                  class="base-link"
+                  href="https://dl.acm.org/doi/10.1145/3643667.3648222"
+                  >[acm]</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="prose">
+            <p>
+              Quantum computing is a growing field that promises many real-world
+              applications such as quantum cryptography or quantum finance. The
+              number of people able to use quantum computing is however still
+              very small. This limitation comes from the difficulty to
+              understand the concepts and to know how to start coding.
+              Therefore, there is a need for tools that can assist non-expert in
+              overcoming this complexity. One possibility would be to use
+              existing conversational agents. Unfortunately ChatGPT and other
+              Large-Language Models produce inaccurate results. This article
+              presents C4Q, a chatbot that answers accurately basic questions
+              and guides users when trying to code quantum programs. Contrary to
+              other approaches C4Q uses a pre-trained large language model only
+              to discover and classify user requests. It then generates an
+              accurate answer using an own engine. Thanks to this architectural
+              design, C4Q’s answers are always correct, and thus C4Q can become
+              a support tool that makes quantum computing more available to
+              non-experts.
+            </p>
+          </div>
+        </main>
+
+        <div class="md:flex md:w-[40rem] mx-auto mt-10 mb-10">
+          <a href="/publications/index.html" class="block flex-1 base-link">
+            <span class="font-normal">← Previous page</span><br />
+            Publications
+          </a>
+
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex-1"></div>
+  </body>
+</html>
